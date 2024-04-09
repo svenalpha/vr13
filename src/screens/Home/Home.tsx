@@ -33,7 +33,7 @@ const Home: React.FC<HomeProps> = (_props) => {
     return (
         <>
             <div>
-                <h4>version 01 14:40   09/04/2024</h4>
+                <h4>version      02      17:14        09/04/2024   </h4>
                 <p>{legend}</p>
                 <a href="https://vitejs.dev" target="_blank">
                     <img src={viteLogo} className={styles.logo} alt="Vite logo" />
