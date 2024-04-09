@@ -4,7 +4,7 @@ import axios from "axios"
 
 
 const Contact: React.FC<ContactProps> = (props) => {
-    const [legend, setLegend] = useState(" here is useState original legend");
+    const [legend, setLegend] = useState("  here is useState original legend");
     const helmet = useHelmet()
 
     useEffect(() => {
