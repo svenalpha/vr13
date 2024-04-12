@@ -19,11 +19,11 @@ const Home: React.FC<HomeProps> = (_props) => {
     }, [helmet])
 
     useEffect(() => {
-        axios.get('/api/tsmessage').then((response) => {         
+        axios.get('/rrr/tsmessage').then((response) => {    // "/api/v1"     
         //console.log(" useEffect, response data = ",response.data)    
          setLegend(response.data);
-                                                       }
-                                        )               
+                                                }
+                                  )               
                     }, [])
 
 
@@ -33,7 +33,7 @@ const Home: React.FC<HomeProps> = (_props) => {
     return (
         <>
             <div>
-                <h4>version      03      17:27        09/04/2024   </h4>
+                <h4>version      04      15:25        09/04/2024   </h4>
                 <p>{legend}</p>
                 <a href="https://vitejs.dev" target="_blank">
                     <img src={viteLogo} className={styles.logo} alt="Vite logo" />

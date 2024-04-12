@@ -4,6 +4,11 @@ class App {
     public router: Router = express.Router();
 
     constructor() {
+        //this.router.get('/api/v1', (req, res) => {
+        //    res.send("/api/v1  Welcomeeee to the API!")
+        //                                         })    
+
+
         this.router.get('/', (req, res) => {
             res.send("Welcomeeee to the API!")
         })

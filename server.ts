@@ -17,7 +17,11 @@ const indexProd: string = isProd
 
 const createServer = async () => {
 
-    const app = express();
+    const app = express();  
+    app.get("/rrr/v9",(req,res) => {
+       res.send("using /rrr/v1  : hello world !!!!");
+                                   }
+           );
 
     let vite: any;
 
@@ -49,7 +53,7 @@ const createServer = async () => {
     }
 
     // api routes
-    app.use('/api', api.router)
+    app.use('/rrr', api.router)
 
     app.use('*', async (req, res) => {
         try {
@@ -105,8 +109,17 @@ const createServer = async () => {
 
 if (!isTest) {
     createServer().then(({ app }) => {
-        app.listen(process.env.PORT, () => {
-            console.log(`Server running on http://localhost:${process.env.PORT}`);
+        app.listen(process.env.PORT || 3000, () => {
+            console.log(`Server running on http://localhost:${process.env.PORT || 3000}`);
         })
     })
 }
+
+//    createServer().then(({ app }) => {
+//        //app.listen(process.env.PORT || 5000, () => {
+//        app.listen(5000, () => {    
+//            console.log(`Server running on http://localhost:${process.env.PORT || 3000}`);
+//        })
+//    })
+
+
