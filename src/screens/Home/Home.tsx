@@ -20,7 +20,7 @@ const Home: React.FC<HomeProps> = (_props) => {
     }, [helmet])
 
     useEffect(() => {
-        axios.get('/rrr/tsmessage').then((response) => {    // "/api/v1"     
+        axios.get('/rrr/tsmessage').then((response) => {    // "/api"     
         //console.log(" useEffect, response data = ",response.data)    
          setLegend(response.data);
                                                 }
@@ -29,7 +29,7 @@ const Home: React.FC<HomeProps> = (_props) => {
 
 
     useEffect(() => {
-        axios.get('/api/v1/proxy1').then((response) => {    // "/api/v1"     
+        axios.get('/api/proxy1').then((response) => {    // "/api"     
         //console.log(" useEffect, response data = ",response.data)    
         setLegend1(response.data);               
                                                        }            
@@ -40,7 +40,7 @@ const Home: React.FC<HomeProps> = (_props) => {
     return (
         <>
             <div>
-                <h4>version      07      15:10        13/04/2024   </h4>
+                <h4>version      08      16:23        13/04/2024   </h4>
                 <p>{legend}</p>
                 <p>{legend1}</p>
                 <a href="https://vitejs.dev" target="_blank">

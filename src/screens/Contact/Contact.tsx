@@ -12,7 +12,7 @@ const Contact: React.FC<ContactProps> = (props) => {
     }, [helmet])
 
     //useEffect(() => {
-    //    axios.get('/api/v1').then((response) => {         
+    //    axios.get('/api').then((response) => {         
     //    //console.log(" useEffect, response data = ",response.data)    
     //     setLegend(response.data);
     //                                                   }

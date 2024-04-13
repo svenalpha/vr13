@@ -19,11 +19,11 @@ const createServer = async () => {
 
     const app = express();  
     app.get("/rrr/v9",(req,res) => {
-       res.send("using /rrr/v1  : hello world !!!!");
+       res.send("using /rrr  : hello world !!!!");
                                    }
            );
   
-    app.get("/api/v1/proxy1",(req,res) => {            
+    app.get("/api/proxy1",(req,res) => {            
        res.send("using proxy1  : hello world 2!!!!");           
                                    }                    
            );                         

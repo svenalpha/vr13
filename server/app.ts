@@ -4,8 +4,8 @@ class App {
     public router: Router = express.Router();
 
     constructor() {
-        this.router.get('/api/v1/proxy2', (req, res) => {
-            res.send("/api/v1/proxy2 in server/app.ts")
+        this.router.get('/api/proxy2', (req, res) => {
+            res.send("/api/proxy2 in server/app.ts")
                                                  })    
 
 
