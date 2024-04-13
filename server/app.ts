@@ -4,17 +4,17 @@ class App {
     public router: Router = express.Router();
 
     constructor() {
-        //this.router.get('/api/v1', (req, res) => {
-        //    res.send("/api/v1  Welcomeeee to the API!")
-        //                                         })    
+        this.router.get('/api/v1/proxy2', (req, res) => {
+            res.send("/api/v1/proxy2 in server/app.ts")
+                                                 })    
 
 
         this.router.get('/', (req, res) => {
-            res.send("Welcomeeee to the API!")
+            res.send("Welcomeeee I!")
         })
 
         this.router.get('/tsmessage', (req, res) => {
-            res.send("the fetched message, tsmessage of API in extra message")
+            res.send("rrr/tsmessage:  the fetched message   ")
         })
         this.router.get('/folks', (req, res) => {
             res.status(200).json([    

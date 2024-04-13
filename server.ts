@@ -22,6 +22,16 @@ const createServer = async () => {
        res.send("using /rrr/v1  : hello world !!!!");
                                    }
            );
+  
+    app.get("/api/v1/proxy1",(req,res) => {            
+       res.send("using proxy1  : hello world 2!!!!");           
+                                   }                    
+           );                         
+       
+
+
+
+
 
     let vite: any;
 

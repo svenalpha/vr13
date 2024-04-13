@@ -9,6 +9,7 @@ import styles from './Home.module.scss'
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const Home: React.FC<HomeProps> = (_props) => {
     const [legend, setLegend] = useState("  here is useState original legend");
+    const [legend1, setLegend1] = useState(" proxy1 didn't work. legend1  here is useState original legend1 ");
     const [count, setCount] = useState(0)
     const data = useLoaderData()
 
@@ -27,14 +28,21 @@ const Home: React.FC<HomeProps> = (_props) => {
                     }, [])
 
 
-
+    useEffect(() => {
+        axios.get('/api/v1/proxy1').then((response) => {    // "/api/v1"     
+        //console.log(" useEffect, response data = ",response.data)    
+        setLegend1(response.data);               
+                                                       }            
+                                        )               
+                    }, [])
 
 
     return (
         <>
             <div>
-                <h4>version      04      15:25        09/04/2024   </h4>
+                <h4>version      05      13:30        13/04/2024   </h4>
                 <p>{legend}</p>
+                <p>{legend1}</p>
                 <a href="https://vitejs.dev" target="_blank">
                     <img src={viteLogo} className={styles.logo} alt="Vite logo" />
                 </a>
