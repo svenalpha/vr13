@@ -6,7 +6,7 @@ import path from 'path'
 export default defineConfig({
   server: {
     proxy: {
-      "/api/v1": "http://localhost:5000/",
+      "/api/v1": "http://localhost:3000/",
     },
   },
   plugins: [
