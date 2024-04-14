@@ -7,14 +7,15 @@ export default defineConfig({
   server: {
     proxy: {
      // "/api/v1": "http://localhost:3000/",
-     "/api": {target: "https://vr13.on render.com",
+     //"/api": {target: "https://vr13.on render.com",
+     "/api": {target: "http://127.0.0.1:5000",
                  changeOrigin: true,   
                  secure: false,   
                  rewrite: (path) => path.replace(/^\/api/,'')     
-                } 
+             }, 
                           
-    },
-  },
+           },
+          },
   plugins: [
     react()
   ],
