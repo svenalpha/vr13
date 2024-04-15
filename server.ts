@@ -126,7 +126,7 @@ if (!isTest) {
     createServer().then(({ app }) => {
 
 ///////////////////////////////////////////////////////////////
-app.use(express.static('dist/app/server')); // see https://www.youtube.com/watch?v=N4yUiQiTvwU  React Proxy | Easiest Fix to Cors Errors    
+app.use(express.static('dist')); // see https://www.youtube.com/watch?v=N4yUiQiTvwU  React Proxy | Easiest Fix to Cors Errors    
 ////////////////////////////////////////////////////////////////
 
 
