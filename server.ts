@@ -19,9 +19,6 @@ const createServer = async () => {
 
     const app = express();  
 
-app.use(express.static('dist'));
-
-
     app.get("/rrr/v9",(req,res) => {
        res.send("using /rrr  : hello world !!!!");
                                    }
@@ -118,11 +115,22 @@ app.use(express.static('dist'));
         }
     })
 
+
+
+
     return { app, vite }
 }
 
+
 if (!isTest) {
     createServer().then(({ app }) => {
+
+///////////////////////////////////////////////////////////////
+app.use(express.static('dist/app/server')); // see https://www.youtube.com/watch?v=N4yUiQiTvwU  React Proxy | Easiest Fix to Cors Errors    
+////////////////////////////////////////////////////////////////
+
+
+
         app.listen(process.env.PORT || 5000, () => {
             console.log(`Server running on http://localhost:${process.env.PORT || 3000}`);
         })
