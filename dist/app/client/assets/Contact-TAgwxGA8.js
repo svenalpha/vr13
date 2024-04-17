@@ -1,1 +1,0 @@
-import{r as s,u as r,j as e}from"./index-DFWkMz1r.js";const l=a=>{const[n,o]=s.useState("  here is useState original legend"),t=r();return s.useEffect(()=>{t.setTitle("Contact")},[t]),e.jsxs(e.Fragment,{children:[e.jsx("h1",{children:"Contact Page"}),e.jsx("p",{children:n})]})};export{l as default};
