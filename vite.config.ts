@@ -4,9 +4,9 @@ import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({  
-  build:{
-         outDir: "./dist/app/client"
-        },
+  //build:{
+  //       outDir: "./dist/app/client"
+  //     },
   server: {
     proxy: {
      // "/api/v1": "http://localhost:3000/",
