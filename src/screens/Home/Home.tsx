@@ -32,15 +32,15 @@ const Home: React.FC<HomeProps> = (_props) => {
         axios.get('/api/proxy1').then((response) => {    // "/api"     
         //console.log(" useEffect, response data = ",response.data)    
         setLegend1(response.data);               
-                                                       }            
-                                        )               
+                                                    }            
+                                     )               
                     }, [])
 
 
     return (
         <>
             <div>
-                <h4>version      23      18:18     17/04/2024   </h4>
+                <h4>version      24      12:42     18/04/2024   </h4>
                 <p>{legend}</p>
                 <p>{legend1}</p>
                 <a href="https://vitejs.dev" target="_blank">

@@ -11,7 +11,7 @@ export default defineConfig({
     proxy: {
      // "/api/v1": "http://localhost:3000/",
      //"/api": {target: "https://vr13.on render.com",
-     "/api": {target: "http://127.0.0.1:5000",
+     "/api": {target: "http://127.0.0.1:3000",
                  changeOrigin: true,   
                  secure: false,   
                  rewrite: (path) => path.replace(/^\/api/,'')     
