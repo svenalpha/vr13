@@ -20,18 +20,18 @@ const createServer = async () => {
     const app = express();  
 
     app.get("/rrr/v9",(req,res) => {
-       res.send("using /rrr  : hello world !!!!");
-                                   }
-           );
-  
-    app.get("/api/proxy1",(req,res) => {            
-       res.send("using proxy1  : hello world 2!!!!");           
-                                   }                    
-           );                         
-       
-
+        res.send("using /rrr  : hello world !!!!");
+                                    }
+            );
+   
+     app.get("/api/proxy1",(req,res) => {            
+        res.send("using proxy1  : hello world 2!!!!");           
+                                    }                    
+            );                         
+        
+ 
 ///////////////////////////////////////////////////////////////
-app.use(express.static('dist')); // see https://www.youtube.com/watch?v=N4yUiQiTvwU  React Proxy | Easiest Fix to Cors Errors    
+//app.use(express.static('dist')); // see https://www.youtube.com/watch?v=N4yUiQiTvwU  React Proxy | Easiest Fix to Cors Errors    
 ////////////////////////////////////////////////////////////////
 
 
@@ -68,6 +68,10 @@ app.use(express.static('dist')); // see https://www.youtube.com/watch?v=N4yUiQiT
 
     // api routes
     app.use('/rrr', api.router)
+
+
+
+
 
     app.use('*', async (req, res) => {
         try {

@@ -11,13 +11,13 @@ const Contact: React.FC<ContactProps> = (props) => {
         helmet.setTitle("Contact")
     }, [helmet])
 
-    //useEffect(() => {
-    //    axios.get('/api').then((response) => {         
-    //    //console.log(" useEffect, response data = ",response.data)    
-    //     setLegend(response.data);
-    //                                                   }
-    //                                    )               
-    //                }, [])
+    useEffect(() => {
+        axios.get('/api/proxy1').then((response) => {         
+        //console.log(" useEffect, response data = ",response.data)    
+         setLegend(response.data);
+                                                       }
+                                        )               
+                    }, [])
 
 
     return (
