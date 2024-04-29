@@ -28,19 +28,19 @@ const Home: React.FC<HomeProps> = (_props) => {
                     }, [])
 
 
-    useEffect(() => {
-        axios.get('/api/proxy1').then((response) => {    // "/api"     
-        //console.log(" useEffect, response data = ",response.data)    
-        setLegend1(response.data);               
-                                                    }            
-                                     )               
-                    }, [])
+  //  useEffect(() => {
+  //      axios.get('/api/proxy1').then((response) => {    // "/api"     
+  //      //console.log(" useEffect, response data = ",response.data)    
+  //      setLegend1(response.data);               
+  //                                                  }            
+  //                                   )               
+  //                  }, [])
 
 
     return (
         <>
             <div>
-                <h4>version      26      18:33     24/04/2024   </h4>
+                <h4>version      27      18:58     29/04/2024   </h4>
                 <p>{legend}</p>
                 <p>{legend1}</p>
                 <a href="https://vitejs.dev" target="_blank">
