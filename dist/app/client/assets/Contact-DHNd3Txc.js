@@ -1,1 +1,0 @@
-import{r as t,u as o,a as c,j as e}from"./index-BgL9b9Vf.js";const p=i=>{const[a,n]=t.useState("  here is useState original legend"),s=o();return t.useEffect(()=>{s.setTitle("Contact")},[s]),t.useEffect(()=>{c.get("/api/proxy1").then(r=>{n(r.data)})},[]),e.jsxs(e.Fragment,{children:[e.jsx("h1",{children:"Contact Page"}),e.jsx("p",{children:a})]})};export{p as default};

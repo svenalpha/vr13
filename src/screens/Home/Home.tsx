@@ -23,8 +23,8 @@ const Home: React.FC<HomeProps> = (_props) => {
         axios.get('/rrr/tsmessage').then((response) => {    // "/api"     
         //console.log(" useEffect, response data = ",response.data)    
          setLegend(response.data);
-                                                }
-                                  )               
+                                                      }
+                                        )               
                     }, [])
 
 
@@ -40,7 +40,7 @@ const Home: React.FC<HomeProps> = (_props) => {
     return (
         <>
             <div>
-                <h4>version      29      17:22     30/04/2024   </h4>
+                <h4>....vr13....no.31....16:06....30/04/2024....</h4>
                 <p>{legend}</p>
                 <p>{legend1}</p>
                 <a href="https://vitejs.dev" target="_blank">

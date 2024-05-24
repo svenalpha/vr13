@@ -14,7 +14,7 @@ class App {
         })
 
         this.router.get('/tsmessage', (req, res) => {
-            res.send("rrr/tsmessage:  the fetched message   ")
+            res.send("rrr/tsmessage:  the fetched message not 'arf  ")
         })
         this.router.get('/folks', (req, res) => {
             res.status(200).json([    

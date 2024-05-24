@@ -14,7 +14,7 @@
     "build:server": "tsc -p tsconfig.server.json && vite build --ssr src/entry-server.tsx --outDir dist/entry",
     "buildOriginal:server": "tsc -p tsconfig.server.json && vite build --ssr src/entry-server.tsx --outDir dist/entry",
     "clean": "rimraf dist",
-    "serve": "cross-env NODE_ENV=production node ./dist/app/server"
+    "serve": "cross-env  NODE_ENV=production node ./dist/app/server"
   },
   "dependencies": {
     "@loadable/component": "^5.16.3",
