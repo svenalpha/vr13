@@ -47,3 +47,21 @@ After starting the application you can use the following routes:
 `http://localhost:3000/api` - This will return your api routes, all api routes will be returned under the `/api` endpoint, to config api routes see the `server/app.ts`
 
 Demo - https://stackblitz.com/github/gihanrangana/vite-express-ssr-ts
+
+
+
+vr13 successful deployment with successful api facility
+in render "web service"     
+  branch =  main   
+  root directory = blank     
+  Build Command =   npm install; npm run build       
+  Start Command  =  npm run serve       
+
+  
+     
+
+
+
+
+
+
