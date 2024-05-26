@@ -39,7 +39,6 @@ export default defineConfig({
       '@client': path.join(__dirname, './src'),
       '@server': path.join(__dirname, './server'),
       '@loaders': path.join(__dirname, './src/loaders'),
-      '@people': path.join(__dirname, './src/db/people'),
     }
   },
   css: {
