@@ -14,7 +14,7 @@ const people = [
 },
 {id: 4,
     username: "William",
-    city: "Leeds"
+    city: "Hull"
 }
                ];
 

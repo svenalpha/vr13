@@ -1,15 +1,15 @@
 import express, { Router } from 'express';
-import  people  from "../src/db/people";
+//import  people  from "../src/db/people";
+import   people   from  "@db/people";
+
 
 class App {
-
-
 
     public router: Router = express.Router();
 
     constructor() {
 
-        const ppp = people;
+        //const ppp = people;
         this.router.get('/peopleapi', (req, res) => { 
         res.status(200).json([people    
                              ])                     }               
