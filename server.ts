@@ -3,6 +3,7 @@ import * as path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import express from 'express';
 import api from './server/app.js';
+//import  people    from "./src/db/people.js";
 
 const __dirname: string = path.dirname(fileURLToPath(import.meta.url));
 const isTest = process.env.VITEST;
@@ -14,6 +15,10 @@ const resolve = (_path: string) => path.resolve(__dirname, _path);
 const indexProd: string = isProd
     ? fs.readFileSync(resolve('client/index.html'), 'utf-8')
     : ''
+//const pp = people;
+//    console.log("xxxxxxxxxxxxxxxxxx  inside server.ts  XXXXXXXXXXXXXXXXXX",pp);
+
+
 
 const createServer = async () => {
 
@@ -25,7 +30,7 @@ const createServer = async () => {
             );
    
      app.get("/api/proxy1",(req,res) => {            
-        res.send("using proxy1  : hello world 2!!!!");           
+        res.send("using proxy1  : successfully fetched using axios : hello world 2!!!!");           
                                     }                    
             );                         
         
