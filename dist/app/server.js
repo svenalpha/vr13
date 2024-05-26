@@ -3,6 +3,7 @@ import * as path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import express from 'express';
 import api from './server/app.js';
+//import  people    from "./src/db/people.js";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const isTest = process.env.VITEST;
 const isProd = process.env.NODE_ENV === 'production';
@@ -11,13 +12,15 @@ const resolve = (_path) => path.resolve(__dirname, _path);
 const indexProd = isProd
     ? fs.readFileSync(resolve('client/index.html'), 'utf-8')
     : '';
+//const pp = people;
+//    console.log("xxxxxxxxxxxxxxxxxx  inside server.ts  XXXXXXXXXXXXXXXXXX",pp);
 const createServer = async () => {
     const app = express();
     app.get("/rrr/v9", (req, res) => {
         res.send("using /rrr  : hello world !!!!");
     });
     app.get("/api/proxy1", (req, res) => {
-        res.send("using proxy1  : hello world 2!!!!");
+        res.send("using proxy1  : successfully fetched using axios : hello world 2!!!!");
     });
     ///////////////////////////////////////////////////////////////
     //app.use(express.static('dist')); // see https://www.youtube.com/watch?v=N4yUiQiTvwU  React Proxy | Easiest Fix to Cors Errors    

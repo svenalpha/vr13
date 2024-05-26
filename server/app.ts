@@ -1,5 +1,5 @@
 import express, { Router } from 'express';
-import  people  from "../src/db/people";
+import  people  from "./db/people.js";
 //import   people   from  "@db/people";
 
 

@@ -2,7 +2,7 @@
 const people = [
 {id: 1,
  username: "Johnny",
- city: "London"
+ city: "Luton"
 },
 {id: 2,
     username: "Micky",
@@ -14,7 +14,7 @@ const people = [
 },
 {id: 4,
     username: "William",
-    city: "Hull"
+    city: "Bradford"
 }
                ];
 

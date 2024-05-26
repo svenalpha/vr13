@@ -1,15 +1,22 @@
 import express from 'express';
+import people from "./db/people.js";
+//import   people   from  "@db/people";
 class App {
     router = express.Router();
     constructor() {
-        this.router.get('/api/proxy2', (req, res) => {
-            res.send("/api/proxy2 in server/app.ts");
+        //const ppp = people;
+        this.router.get('/peopleapi', (req, res) => {
+            res.status(200).json([people
+            ]);
+        });
+        this.router.get('/proxy2', (req, res) => {
+            res.send("/rrr/proxy2 in server/app.ts");
         });
         this.router.get('/', (req, res) => {
             res.send("Welcomeeee I!");
         });
         this.router.get('/tsmessage', (req, res) => {
-            res.send("rrr/tsmessage:  the fetched message not 'arf  ");
+            res.send("in server/app.ts rrr/tsmessage:  this message has been -- fetched --  ");
         });
         this.router.get('/folks', (req, res) => {
             res.status(200).json([
@@ -19,7 +26,7 @@ class App {
                 }
             ]);
         });
-    }
-}
+    } // end constructor    
+} //  end class App
 const api = new App();
 export default api;

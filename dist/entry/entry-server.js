@@ -892,7 +892,7 @@ const Home = (_props) => {
   }, []);
   return /* @__PURE__ */ jsxs(Fragment, { children: [
     /* @__PURE__ */ jsxs("div", { children: [
-      /* @__PURE__ */ jsx("h4", { children: "....vr13....no.31....16:06....24/05/2024...." }),
+      /* @__PURE__ */ jsx("h4", { children: "....vr13....no.33....12:20....26/05/2024...." }),
       /* @__PURE__ */ jsx("p", { children: legend }),
       /* @__PURE__ */ jsx("p", { children: legend1 }),
       /* @__PURE__ */ jsx("a", { href: "https://vitejs.dev", target: "_blank", children: /* @__PURE__ */ jsx("img", { src: viteLogo, className: styles.logo, alt: "Vite logo" }) }),
