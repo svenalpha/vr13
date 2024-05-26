@@ -1,6 +1,6 @@
 import express, { Router } from 'express';
-//import  people  from "../src/db/people";
-import   people   from  "@db/people";
+import  people  from "../src/db/people";
+//import   people   from  "@db/people";
 
 
 class App {
