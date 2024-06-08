@@ -892,7 +892,7 @@ const Home = (_props) => {
   }, []);
   return /* @__PURE__ */ jsxs(Fragment, { children: [
     /* @__PURE__ */ jsxs("div", { children: [
-      /* @__PURE__ */ jsx("h4", { children: "....vr13....no.33....12:20....26/05/2024...." }),
+      /* @__PURE__ */ jsx("h4", { children: "....vr13....no.35....15:27....08/06/2024...." }),
       /* @__PURE__ */ jsx("p", { children: legend }),
       /* @__PURE__ */ jsx("p", { children: legend1 }),
       /* @__PURE__ */ jsx("a", { href: "https://vitejs.dev", target: "_blank", children: /* @__PURE__ */ jsx("img", { src: viteLogo, className: styles.logo, alt: "Vite logo" }) }),
@@ -920,11 +920,54 @@ const homeLoader = async () => {
   return { data: `Home loader - random value ${rand()}` };
 };
 const About = (props) => {
+  const [legend, setLegend] = useState();
+  const [folksArray, setFolksArray] = useState([]);
+  const [usersArray, setUsersArray] = useState([]);
   const helmet = useHelmet();
+  async function doGetDatax() {
+    axios.get("/rrr/users").then(
+      (response) => {
+        setUsersArray(response.data);
+        console.log("userArray = ", usersArray);
+      }
+    );
+    axios.get("/rrr/folks").then(
+      (response) => {
+        setFolksArray(response.data);
+        console.log("folksArray = ", folksArray);
+      }
+    );
+    axios.get("/rrr/tsmessage").then(
+      (response) => {
+        setLegend(response.data);
+      }
+    );
+  }
+  useEffect(() => {
+    doGetDatax();
+  }, []);
   useEffect(() => {
     helmet.setTitle("About");
   }, [helmet]);
-  return /* @__PURE__ */ jsx(Fragment, { children: /* @__PURE__ */ jsx("h1", { children: "About Us" }) });
+  return /* @__PURE__ */ jsxs(Fragment, { children: [
+    /* @__PURE__ */ jsx("h1", { children: "About Us" }),
+    /* @__PURE__ */ jsx("p", { children: legend }),
+    /* @__PURE__ */ jsx("div", { children: folksArray.map(
+      (folk) => /* @__PURE__ */ jsx("div", { children: /* @__PURE__ */ jsxs("h6", { children: [
+        folk["name"],
+        "      ",
+        folk["star"]
+      ] }) }, folk["id"])
+    ) }),
+    /* @__PURE__ */ jsx("div", { children: usersArray.map(
+      (user) => /* @__PURE__ */ jsx("div", { children: /* @__PURE__ */ jsxs("h6", { children: [
+        user["username"],
+        "      ",
+        user["city"]
+      ] }) }, user["id"])
+    ) }),
+    /* @__PURE__ */ jsx("p", { children: "qwwwertyuiogggggghhjhhjjkkll" })
+  ] });
 };
 const Contact = loadable(() => import("./assets/Contact-DZIUGBIF.js"), { fallback: /* @__PURE__ */ jsx("div", { children: "Loading..." }) });
 const routes = [

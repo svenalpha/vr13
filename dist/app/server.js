@@ -3,7 +3,7 @@ import * as path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import express from 'express';
 import api from './server/app.js';
-//import  people    from "./src/db/people.js";
+//import   users    from "./server/db/users.js";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const isTest = process.env.VITEST;
 const isProd = process.env.NODE_ENV === 'production';

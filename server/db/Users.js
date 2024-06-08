@@ -1,5 +1,5 @@
 
-const people = [
+const users = [
 {id: 1,
  username: "Johnny",
  city: "Luton"
@@ -18,8 +18,8 @@ const people = [
 }
                ];
 
-export default people;
- //module.exports = people; 
+export default users;
+ //module.exports = users; 
 
 
 

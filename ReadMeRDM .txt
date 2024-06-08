@@ -43,3 +43,18 @@ separate file for data to be imported. (ie /folks).
 see youtube see 6:00 of  poXp9uP8TfM  19:50   "How to deploy frontend and backend on 
 Render in the same folder?"
 
+
+
+         <div>
+            {
+            users.map(user => (
+                                    <div key={user.id}> 
+                                       <h4>{user.username}</h4>
+                                       <h4>{user.city}</h4>
+                                     </div>  
+                              )         
+                      )                 
+
+              }
+         </div> 
+

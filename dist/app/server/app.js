@@ -1,13 +1,12 @@
 import express from 'express';
-import people from "./db/people.js";
+import users from "./db/Users.js";
 //import   people   from  "@db/people";
 class App {
     router = express.Router();
     constructor() {
-        //const ppp = people;
-        this.router.get('/peopleapi', (req, res) => {
-            res.status(200).json([people
-            ]);
+        //   //const ppp = people;
+        this.router.get('/users', (req, res) => {
+            res.status(200).json(users);
         });
         this.router.get('/proxy2', (req, res) => {
             res.send("/rrr/proxy2 in server/app.ts");
@@ -20,9 +19,9 @@ class App {
         });
         this.router.get('/folks', (req, res) => {
             res.status(200).json([
-                { name: "Billy", star: "aquarius"
+                { id: 0, name: "Billy", star: "aquarius"
                 },
-                { name: "Fred", star: "pisces"
+                { id: 1, name: "Fred", star: "pisces"
                 }
             ]);
         });
