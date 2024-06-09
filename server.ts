@@ -2,6 +2,8 @@ import * as fs from 'node:fs';
 import * as path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import express from 'express';
+import mongoose from 'mongoose';
+//import 'dotenv/config';
 import api from './server/app.js';
 //import   users    from "./server/db/users.js";
 
@@ -133,21 +135,61 @@ const createServer = async () => {
     return { app, vite }
 }
 
-
-if (!isTest) {
-    createServer().then(({ app }) => {
-
-        app.listen(process.env.PORT || 3000, () => {
-            console.log(`Server running on http://localhost:${process.env.PORT || 3000}`);
-        })
-    })
-}
-
+//   original createServer, ie before introduction of mongoose  
+//
+//if (!isTest) {
 //    createServer().then(({ app }) => {
-//        //app.listen(process.env.PORT || 5000, () => {
-//        app.listen(5000, () => {    
+//
+//        app.listen(process.env.PORT || 3000, () => {
 //            console.log(`Server running on http://localhost:${process.env.PORT || 3000}`);
 //        })
 //    })
+//}
+
+
+
+///////////////////////// im ported from vr08_1 /////
+//mongoose.connect("mongodb+srv://userx:6j5pbHRxwLanqaq4@cluster0.t8319.mongodb.net/Project0?retryWrites=true&w=majority")
+const dbURI='mongodb+srv://userx:6j5pbHRxwLanqaq4@cluster0.t8319.mongodb.net/Project0?retryWrites=true&w=majority'; 
+if (!isTest) 
+ {createServer().then(({ app }) =>
+    app.listen((process.env.PORT || 3000), () =>        
+    {console.log('http://localhost:3000');
+//////////////////////////////////////////////////////////
+mongoose.connect(dbURI, {
+  //useNewUrlParser: true,        // apparently deprecated
+  //useUnifiedTopology: true,     // apparently deprecated      
+                        }
+                )
+.then(() => {
+  console.log('Connected to MongoDB ccccccccccvvvvvvvvvvv');
+  //  mdb=mongoose.Connection; 
+            }
+     )    
+
+.catch((error) => {
+  console.error('Error connecting to MongoDB  bbbbnnnnnmmm', error)
+                  }
+      )
+
+
+    }         ),   /// end app.listen            
+                     )
+ }   ///  end    if (!isTest)
+/////////////////////////  end  imported from vr08_1 /////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

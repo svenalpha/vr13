@@ -15,7 +15,10 @@ class App {
                             )                   }               
                        )                                           
 
-
+        this.router.get('/getMongo', (req, res) => {
+        res.send("/rrr/getMongo     in server/app.ts")
+                                                   }    
+                       )             
 
         this.router.get('/proxy2', (req, res) => {
             res.send("/rrr/proxy2 in server/app.ts")
