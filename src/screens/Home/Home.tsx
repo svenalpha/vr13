@@ -40,7 +40,7 @@ const Home: React.FC<HomeProps> = (_props) => {
     return (
         <>
             <div>
-                <h4>....vr13....no.36....19:157....09/06/2024....</h4>
+                <h4>....vr13....no.37....20:45....09/06/2024....</h4>
                 <p>{legend}</p>
                 <p>{legend1}</p>
                 <a href="https://vitejs.dev" target="_blank">

@@ -1,4 +1,5 @@
-import express, { Router } from 'express';
+import express, { Router } from 'express';  
+import WorkoutModelDb from "./models/workoutDbModel.js";
 import   users    from "./db/Users.js";
 //import   people   from  "@db/people";
 
@@ -6,6 +7,8 @@ import   users    from "./db/Users.js";
 class App {
           
     public router: Router = express.Router();
+
+   
   
     constructor() {
 
@@ -15,10 +18,20 @@ class App {
                             )                   }               
                        )                                           
 
-        this.router.get('/getMongo', (req, res) => {
-        res.send("/rrr/getMongo     in server/app.ts")
-                                                   }    
-                       )             
+
+        this.router.get('/getMongo', async (req, res) => {
+        //  res.send("/rrr/getMongo     in server/app.ts")
+        const workouts = await WorkoutModelDb.find({}).sort({createdAt: -1});  // ie find all, sorted in descending order       
+        // ....find({reps:20}).... finds all entries where reps=20
+         return res.status(200).json(workouts);  
+  
+
+
+                                                          }    
+                        )             
+
+
+
 
         this.router.get('/proxy2', (req, res) => {
             res.send("/rrr/proxy2 in server/app.ts")

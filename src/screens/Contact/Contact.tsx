@@ -6,7 +6,7 @@ import axios from "axios"
 const Contact: React.FC<ContactProps> = (props) => {
     const [legend, setLegend] = useState("  here is useState original legend");
     const [data, setData] = useState();
-    const [datax, setDatax] = useState("aaaaaaaaasssssssssssdddddddd");
+    const [datax, setDatax] = useState([]);
     const url ="";
     const helmet = useHelmet()
 
@@ -35,9 +35,10 @@ const getDataFromMongo = async () =>
     //console.log(" useEffect, response data = ",response.data)    
     setDatax(response.data);
     console.log("response to getMongo datax = ",datax);
-                                           }
-                            )  
+                                                       }
+                  )  
 
+            
    //const response = await fetch(url);
    //const json = await response.json();
    //console.log("in getAllWorkouts, response = ",response);
@@ -59,7 +60,24 @@ const getDataFromMongo = async () =>
         <>
             <h4>Contact Page</h4>
             <p>{legend}</p>
-            <p>{datax}</p>
+            
+            <div>
+            {
+            datax.map(dat => (
+                                    <div key={dat["id"]}> 
+                                       <h6>{dat['title']}      {dat['reps']}     {dat['load']}</h6>
+                                     </div>  
+                             )         
+                      )                 
+
+              }
+         </div> 
+
+
+
+
+
+
             <button onClick={getDataFromMongo}>Access server using proxy</button>
         </>
     )
