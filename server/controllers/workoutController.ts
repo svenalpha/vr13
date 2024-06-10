@@ -63,7 +63,7 @@ export const createWorkoutEntry = async (req:any,res:any)=>{
 //zz                                                   }   // end   export const updateWorkoutEntry      
 //zz                                
                                
-                                                 
+export default getAllWorkoutEntries;                                            
                                                      
                                              
                                             
