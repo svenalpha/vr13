@@ -4,7 +4,7 @@ import   users    from "./db/Users.js";
 //import {getEnv,getAllWorkoutEntries,
 //    //updateWorkoutEntry,
 //    createWorkoutEntry} from "./controllers/workoutController.js";
-import  { getAllWorkoutEntries }  from "./controllers/workoutController.js";
+import  { getAllWorkoutEntries }  from "./controllers/workoutController.cjs";
 
 
 //import   people   from  "@db/people";
