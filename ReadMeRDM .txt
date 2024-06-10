@@ -41,7 +41,12 @@ in render as "web service"
 to do:
 separate file for data to be imported. (ie /folks).
 see youtube see 6:00 of  poXp9uP8TfM  19:50   "How to deploy frontend and backend on 
-Render in the same folder?"
+Render in the same folder?"                  
+
+
+using array in xxx.map  do <div key={dat["id"]}>  <h6>{dat['title']}  {dat['reps']} {dat['load']}</h6> </div>  
+workoutControllers changed to .ts from .js and changed (req,res) to (req:any,res:any)
+
 
 
 
