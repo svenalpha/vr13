@@ -4,7 +4,7 @@ import   users    from "./db/Users.js";
 //import {getEnv,getAllWorkoutEntries,
 //    //updateWorkoutEntry,
 //    createWorkoutEntry} from "./controllers/workoutController.js";
-import  { getAllWorkoutEntries }  from "./controllers/workoutController.js";
+import  { getAllWorkoutEntries, getSecondExport }  from "./controllers/workoutController.js";
 
 
 //import   people   from  "@db/people";
@@ -23,6 +23,8 @@ class App {
         res.status(200).json(users    
                             )                   }               
                        )                                           
+
+        this.router.get("/doGetSecondExport",  getSecondExport);  //see export const getAllWorkoutEntries in workoutController.js
 
         this.router.get("/getMongo",  getAllWorkoutEntries);  //see export const getAllWorkoutEntries in workoutController.js
         //this.router.get('/getMongo', async (req, res) => {

@@ -5,6 +5,7 @@ import axios from "axios"
 
 const Contact: React.FC<ContactProps> = (props) => {
     const [legend, setLegend] = useState("  here is useState original legend");
+    const [legend2, setLegend2] = useState("  here is useState original legend pre fetch ");
     const [data, setData] = useState();
     const [datax, setDatax] = useState([]);
     const url ="";
@@ -18,8 +19,15 @@ const Contact: React.FC<ContactProps> = (props) => {
         axios.get('/api/proxy1').then((response) => {         
         //console.log(" useEffect, response data = ",response.data)    
          setLegend(response.data);
-                                                       }
-                                        )               
+                                                    }
+                                      )        
+        axios.get('/rrr/doGetSecondExport').then((response) => {    // "/api"     
+               //console.log(" useEffect, response data = ",response.data)    
+               setLegend2(response.data);
+                                                             }
+                 )                                         
+                                        
+
                     }, [])     // end useEffect
 //function async getDataFromMongo() 
 const getDataFromMongo = async () => 
@@ -38,7 +46,7 @@ const getDataFromMongo = async () =>
                                                        }
                   )  
 
-            
+      
    //const response = await fetch(url);
    //const json = await response.json();
    //console.log("in getAllWorkouts, response = ",response);
@@ -60,7 +68,7 @@ const getDataFromMongo = async () =>
         <>
             <h4>Contact Page</h4>
             <p>{legend}</p>
-            
+            <p>{legend2}</p>
             <div>
             {
             datax.map(dat => (

@@ -23,7 +23,12 @@ export const getEnv =  (req:any,res:any)=>{
     return res.status(200).json(workouts);            }                  
     //return res.json({mssg: "GET all entries"}); 
     //return;
- 
+
+    export const getSecondExport =  (req:any, res:any)=>{
+        res.send("-- fetched--  workoutController via app.ts /rrr/getSecondExport in server/app.ts")
+                                                        }  
+
+
 
 //  GET single entry
 
@@ -63,7 +68,8 @@ export const createWorkoutEntry = async (req:any,res:any)=>{
 //zz                                                   }   // end   export const updateWorkoutEntry      
 //zz                                
                                
-export default getAllWorkoutEntries;                                            
+export default { getAllWorkoutEntries , getSecondExport }; 
+//export default getEnv;                                           
 //module.exports = getAllWorkoutEntries;                                                      
                                              
                                             
